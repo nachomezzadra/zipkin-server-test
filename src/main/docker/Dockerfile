@@ -1,5 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-COPY /target/zipkin-app-1.0-SNAPSHOT.jar /zipkin-app-1.0-SNAPSHOT.jarCOPY /target/zipkin-app-1.0-SNAPSHOT
+COPY /maven/zipkin-server.jar /zipkin-server.jar
+
 EXPOSE 8080
-ENTRYPOINT java -jar /zipkin-app-1.0-SNAPSHOT.jar
+ENTRYPOINT java -jar /zipkin-server.jar
