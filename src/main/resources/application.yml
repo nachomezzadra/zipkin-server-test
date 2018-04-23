@@ -1,3 +1,7 @@
 spring:
   application:
     name: zipkin-server
+    inetutils:
+      ignoredInterfaces:
+        - docker0
+        - veth.*
